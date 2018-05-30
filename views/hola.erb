@@ -1,8 +1,10 @@
-<h1>Hola</h1>
-<% 50.times do |num|%>
-  <% if (num+1)%2==0 %>
-    <p><%=num+1%> Soy Par!</p>
-  <%else%>
-    <p><%=num+1%> Soy Impar</p>
-  <% end %>
-<% end %>
+<%if params[:respuesta] %>
+  <h1><%=params[:respuesta] %></h1>
+<%else%>
+  <h1>Abuela Sorda</h1>
+  <form action="/respuesta" method="post">
+    <label for="">Di algo Abuela:</label><br>
+    <input type="text" name="frase" value="">
+    <input type="submit" name="" value="Dilo">
+  </form>
+<%end%>
