@@ -8,7 +8,7 @@ post '/respuesta' do
     @respuesta = "Ahhh si, manzanas!"
     redirect "/?respuesta=#{@respuesta}"
   else
-    @respuesta = "Habla más duro mijito"
+    @respuesta = "Habla mas duro mijito"
     redirect "/?respuesta=#{@respuesta}"
   end
 end
